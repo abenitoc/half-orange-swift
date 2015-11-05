@@ -15,6 +15,9 @@
 		5C0AEA281BEA24230055A15D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C0AEA261BEA24230055A15D /* LaunchScreen.storyboard */; };
 		5C0AEA331BEA24230055A15D /* media_naranjaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AEA321BEA24230055A15D /* media_naranjaTests.swift */; };
 		5C0AEA3E1BEA24230055A15D /* media_naranjaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AEA3D1BEA24230055A15D /* media_naranjaUITests.swift */; };
+		BC94AC781BEB78640003E41C /* FinalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94AC771BEB78640003E41C /* FinalVC.swift */; settings = {ASSET_TAGS = (); }; };
+		BC94AC7A1BEB78940003E41C /* NacimientoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94AC791BEB78940003E41C /* NacimientoVC.swift */; settings = {ASSET_TAGS = (); }; };
+		BC94AC7C1BEB78AD0003E41C /* MuerteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94AC7B1BEB78AD0003E41C /* MuerteVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		5C0AEA391BEA24230055A15D /* media naranjaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "media naranjaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0AEA3D1BEA24230055A15D /* media_naranjaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = media_naranjaUITests.swift; sourceTree = "<group>"; };
 		5C0AEA3F1BEA24230055A15D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC94AC771BEB78640003E41C /* FinalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalVC.swift; sourceTree = "<group>"; };
+		BC94AC791BEB78940003E41C /* NacimientoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NacimientoVC.swift; sourceTree = "<group>"; };
+		BC94AC7B1BEB78AD0003E41C /* MuerteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MuerteVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				5C0AEA261BEA24230055A15D /* LaunchScreen.storyboard */,
 				5C0AEA291BEA24230055A15D /* Info.plist */,
 				5C0AEA211BEA24230055A15D /* media_naranja.xcdatamodeld */,
+				BC94AC771BEB78640003E41C /* FinalVC.swift */,
+				BC94AC791BEB78940003E41C /* NacimientoVC.swift */,
+				BC94AC7B1BEB78AD0003E41C /* MuerteVC.swift */,
 			);
 			path = "media naranja";
 			sourceTree = "<group>";
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC94AC7C1BEB78AD0003E41C /* MuerteVC.swift in Sources */,
 				5C0AEA1D1BEA24230055A15D /* ViewController.swift in Sources */,
 				5C0AEA1B1BEA24230055A15D /* AppDelegate.swift in Sources */,
+				BC94AC7A1BEB78940003E41C /* NacimientoVC.swift in Sources */,
 				5C0AEA231BEA24230055A15D /* media_naranja.xcdatamodeld in Sources */,
+				BC94AC781BEB78640003E41C /* FinalVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +500,7 @@
 				5C0AEA441BEA24230055A15D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C0AEA451BEA24230055A15D /* Build configuration list for PBXNativeTarget "media naranjaTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +509,7 @@
 				5C0AEA471BEA24230055A15D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C0AEA481BEA24230055A15D /* Build configuration list for PBXNativeTarget "media naranjaUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +518,7 @@
 				5C0AEA4A1BEA24230055A15D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
