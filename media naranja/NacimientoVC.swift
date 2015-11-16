@@ -11,6 +11,7 @@ import UIKit
 class NacimientoVC: UIViewController {
 
     @IBOutlet weak var fechaNac: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,10 +28,27 @@ class NacimientoVC: UIViewController {
         let fechaHoy = NSDate()
         
         if fechaNac.date.laterDate(fechaHoy) === fechaNac.date {
-        
-        
-        
+            //lanzar alertview
+            
+            let alert = UIAlertController(title: "Problema", message: "No puedes nacer en el futuro", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Confirmar", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: false, completion: nil)
+            shouldPerformSegueWithIdentifier("finalSegue", sender: nil)
+            
+        } else {
+            
+            if segue.identifier == "finalSegue"{
+            
+                if let fechaBirth = segue.destinationViewController as? FinalVC {
+                    
+                    fechaBirth.fechaNacimiento = fechaNac.date
+                
+                }
+            }
+            
+            
         }
+        
         
         
     }

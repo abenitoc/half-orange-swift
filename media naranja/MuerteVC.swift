@@ -9,14 +9,25 @@ import UIKit
 
 class MuerteVC: UIViewController {
 
+    @IBOutlet weak var fechaMuerteLabel: UILabel!
+    
+    var fechaDePalmar : NSDate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if fechaDePalmar != nil {
+        let formatoFecha = NSDateFormatter()
+        formatoFecha.dateFormat = "dd-MM-YYYY"
+        
+            fechaMuerteLabel.text = formatoFecha.stringFromDate(fechaDePalmar!)
+        }
+            // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+        
         // Dispose of any resources that can be recreated.
     }
     

@@ -9,7 +9,11 @@
 import UIKit
 
 class FinalVC: UIViewController {
-
+    
+    var fechaNacimiento : NSDate?
+    
+    @IBOutlet weak var enamoramientoPicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +25,32 @@ class FinalVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let tiempodeAmar = enamoramientoPicker.date
+        
+        if fechaNacimiento?.earlierDate(tiempodeAmar) == tiempodeAmar{
+            
+            let alert = UIAlertController(title: "Problema", message: "No puedes enamorarte antes de nacer", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Confirmar", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: false, completion: nil)
+            shouldPerformSegueWithIdentifier("finalSegue", sender: nil)
+            
+        } else {
+        
+            if segue.identifier == "muerteSegue"{
+                
+                if let fechaMorir = segue.destinationViewController as? MuerteVC {
+                    
+                    let vivencias = enamoramientoPicker.date.timeIntervalSinceDate(fechaNacimiento!)
+                    let diadePalmar = enamoramientoPicker.date.dateByAddingTimeInterval(vivencias)
+                    
+                    fechaMorir.fechaDePalmar = diadePalmar
+                }
+            }
+            
+        }
+        
+    }
     
     /*
     // MARK: - Navigation
