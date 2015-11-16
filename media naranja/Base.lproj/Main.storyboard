@@ -38,7 +38,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUb-dz-1wG">
                                         <rect key="frame" x="0.0" y="550" width="560" height="30"/>
                                         <animations/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Siguiente"/>
                                         <connections>
                                             <segue destination="yGV-4d-DQc" kind="presentation" identifier="finalSegue" id="zbi-gZ-w8K"/>
                                         </connections>
@@ -96,7 +96,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHZ-Vl-T2o">
                                         <rect key="frame" x="0.0" y="550" width="560" height="30"/>
                                         <animations/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Siguiente"/>
                                         <connections>
                                             <segue destination="FkW-fN-prW" kind="presentation" identifier="muerteSegue" id="WBO-bk-zCc"/>
                                         </connections>
@@ -137,20 +137,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eyw-V6-YAs">
                                 <rect key="frame" x="20" y="20" width="560" height="380"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Moriras el día" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91L-Ny-xKX">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="344"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moriras el día" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91L-Ny-xKX">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="82"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="68"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Moriras el día" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ein-zJ-zgi">
-                                        <rect key="frame" x="0.0" y="344" width="560" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moriras el día" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ein-zJ-zgi">
+                                        <rect key="frame" x="0.0" y="82" width="560" height="36"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSl-vD-eLU">
+                                        <rect key="frame" x="0.0" y="118" width="560" height="263"/>
+                                        <animations/>
+                                        <state key="normal" title="Volver"/>
+                                        <connections>
+                                            <segue destination="yrS-Ff-3GZ" kind="unwind" unwindAction="goHome:" id="Apn-za-dXu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                             </stackView>
@@ -169,6 +177,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCS-lu-vYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yrS-Ff-3GZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="714" y="584"/>
         </scene>

@@ -9,6 +9,11 @@
 import UIKit
 
 class NacimientoVC: UIViewController {
+    
+    
+    @IBAction func goHome(segue:UIStoryboardSegue) {
+        
+    }
 
     @IBOutlet weak var fechaNac: UIDatePicker!
     
