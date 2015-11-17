@@ -31,8 +31,8 @@ class NacimientoVC: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let fechaHoy = NSDate()
-        
-        if fechaNac.date.laterDate(fechaHoy) === fechaNac.date {
+        let fechaNaci = fechaNac.date
+        if fechaNaci.laterDate(fechaHoy) === fechaNaci {
             //lanzar alertview
             
             let alert = UIAlertController(title: "Problema", message: "No puedes nacer en el futuro", preferredStyle: UIAlertControllerStyle.Alert)
